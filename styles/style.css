@@ -1,21 +1,17 @@
-@media screen and (width: 320px) {
-    main {
-        display: flex;
-        flex-flow: column wrap;
-    }
-}
-
 body {
     font-family: "Lexend Deca", sans-serif;
-    padding: 5em 1em;
     background-color: hsl(0, 0%, 95%);
     font-weight: 400;
+    padding: 20% auto;
 }
-main {
+
+.container {
     display: flex;
-    flex-flow: row nowrap;
+    /* flex-flow: row nowrap; */
     justify-content: center;
     align-items: center;
+    margin: 10% auto;
+    border-radius: 8px;
 }
 .title {
     font-family: "Big Shoulders Display", sans-serif;
@@ -34,6 +30,10 @@ main {
     border-radius: 38px;
     font-family: "Lexend Deca", sans-serif;
     border: none;
+    transition: transform .5s;
+}
+.learn-more:hover {
+    transform: scale(110%);
 }
 .box p {
     color: hsla(0, 0%, 100%, 0.75);
@@ -58,6 +58,18 @@ main {
 .luxury .learn-more {
     color: hsl(179, 100%, 13%, 0.95);
 }
+@media (max-width: 810px) {
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .sedans {
+        border-radius: 8px 8px 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 8px 8px;
+    }
+}
 
 /* Copied from the original index.html */
 .attribution { 
@@ -72,3 +84,4 @@ main {
 .attribution a:hover {
     text-shadow: 0 0 10px #808080;
 }
+
